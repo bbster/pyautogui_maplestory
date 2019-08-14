@@ -17,14 +17,8 @@ def print_mouse_pos():
 
 def imgsct():
     pyautogui.screenshot('전구.png', region=(771, 532, 100, 70))
-#
-# imgsct()
-# print_mouse_pos()
-
-# 833 459 center
 
 def start():
-    while True:
         pyautogui.click(x=156, y=364)
         time.sleep(2)
         pyautogui.click(x=811, y=563)
@@ -53,23 +47,110 @@ def start():
         time.sleep(90)
 
 
-# start()
-
-
 def buff():
     while True:
         time.sleep(3)
-        pyautogui.press(keys='1', presses=7) # 버프 1번
+        pyautogui.press(keys='1', presses=2, interval=0.5)  # 버프 1번
         time.sleep(2)
-        pyautogui.press(keys='2', presses=7) # 버프 2번
+        pyautogui.press(keys='2', presses=2, interval=0.5)  # 버프 2번
         time.sleep(2)
-        pyautogui.press(keys='3', presses=7) # 버프 3번
+        pyautogui.press(keys='3', presses=2, interval=0.5)  # 버프 3번
         time.sleep(2)
-        pyautogui.press(keys='4', presses=7) # 버프 4번
+        pyautogui.press(keys='4', presses=2, interval=0.5)  # 버프 4번
         time.sleep(2)
-        pyautogui.press(keys='b', presses=7) # 버프 5번
-        time.sleep(2)
-        pyautogui.click(x=1060, y=904) # 피버 버튼
-        time.sleep(300)
+        pyautogui.press(keys='b', presses=2, interval=0.5)  # 버프 5번
+        time.sleep(150)
 
-buff()
+# 미니 던전용
+def mini_dungeon():
+    while True:
+        time.sleep(2)
+        # 1층
+        pyautogui.keyDown('left')
+        pyautogui.keyUp('left')
+        time.sleep(0.5)
+        pyautogui.press(keys='d')
+        time.sleep(1)
+        pyautogui.press(keys='space')
+        time.sleep(0.1)
+        pyautogui.keyDown('up')
+        pyautogui.keyDown('space')
+        pyautogui.keyUp('space')
+        time.sleep(1)
+        pyautogui.keyUp('up')
+        time.sleep(1)
+
+        # 2층
+        pyautogui.press(keys='d')
+        time.sleep(1)
+        pyautogui.press(keys='space')
+        time.sleep(0.1)
+        pyautogui.keyDown('up')
+        pyautogui.keyDown('space')
+        pyautogui.keyUp('space')
+        time.sleep(1)
+        pyautogui.keyUp('up')
+        time.sleep(1)
+
+        # 3층
+        pyautogui.press(keys='d')
+        time.sleep(1)
+        pyautogui.keyDown('down')
+        pyautogui.keyDown('space')
+        pyautogui.keyUp('space')
+        time.sleep(1)
+        pyautogui.keyDown('space')
+        pyautogui.keyUp('space')
+        pyautogui.keyUp('down')
+        time.sleep(1)
+        pyautogui.press(keys='d')
+        time.sleep(1)
+
+        # #방향 틀어서
+        # # 1층
+        # pyautogui.keyDown('right')
+        # pyautogui.keyUp('right')
+        # time.sleep(0.5)
+        # pyautogui.press(keys='d')
+        # time.sleep(1)
+        # pyautogui.press(keys='space')
+        # pyautogui.keyDown('up')
+        # pyautogui.keyDown('space')
+        # pyautogui.keyUp('space')
+        # time.sleep(1)
+        # pyautogui.keyUp('up')
+        #
+        # time.sleep(1)
+        #
+        # # 2층
+        # pyautogui.press(keys='d')
+        # time.sleep(1)
+        # pyautogui.press(keys='space')
+        # pyautogui.keyDown('up')
+        # pyautogui.keyDown('space')
+        # pyautogui.keyUp('space')
+        # time.sleep(1)
+        # pyautogui.keyUp('up')
+        # time.sleep(1)
+        #
+        # # 3층
+        # pyautogui.press(keys='d')
+        # time.sleep(1)
+        # pyautogui.keyDown('down')
+        # pyautogui.keyDown('space')
+        # pyautogui.keyUp('space')
+        # time.sleep(1)
+        # pyautogui.keyDown('space')
+        # pyautogui.keyUp('space')
+        # pyautogui.keyUp('down')
+        # time.sleep(1)
+        # pyautogui.press(keys='d')
+        # time.sleep(1)
+
+
+while True:
+    buff()
+    # start()
+    # mini_dungeon
+    # imgsct()
+    # print_mouse_pos()
